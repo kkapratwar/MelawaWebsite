@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/hyperspacetemplate/")assets/css/main.css"/>
+    @*[if lte IE 8]><script src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/ie/html5shiv.js"></script>[endif]*@
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.scrollex.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.scrolly.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/skel.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/main.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Home", "Registration")">Welcome</a></li>
+                    <li><a href="@Url.Action("ProgramDetails", "Registration")">Program Details</a></li>
+                    <li><a href="@Url.Action("Venue", "Registration")">Venue</a></li>
+                    <li><a href="@Url.Action("AboutUs", "Registration")">Who we are</a></li>
+                    <li><a href="@Url.Action("Register", "Registration")">Register</a></li>
+                    <li><a href="@Url.Action("Login", "Registration")">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

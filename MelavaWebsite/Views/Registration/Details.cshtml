@@ -1,0 +1,106 @@
+﻿@model MelavaWebsite.Models.PersonDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PersonDetails</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BirthName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BirthName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstGotra)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstGotra)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecondGotra)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecondGotra)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfBirth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BirthPlace)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BirthPlace)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Education)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Education)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Height)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Height)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Occupation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Occupation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreatedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
