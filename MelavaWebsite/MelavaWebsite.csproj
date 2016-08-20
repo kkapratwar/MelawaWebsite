@@ -318,7 +318,12 @@
     <Content Include="Content\hyperspacetemplate\assets\sass\libs\_vars.scss" />
     <Content Include="Content\hyperspacetemplate\assets\sass\main.scss" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\imgAudumebrK.jpg" />
+    <Content Include="Images\imgDinkarC.jpg" />
+    <Content Include="Images\imgPromodU.jpg" />
+    <Content Include="Images\imgSanjayK.jpg" />
     <Content Include="Images\KanyakaParmeshwari.jpg" />
+    <Content Include="Images\phoneIcon.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

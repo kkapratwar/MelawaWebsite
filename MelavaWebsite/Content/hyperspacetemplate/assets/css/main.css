@@ -3882,3 +3882,91 @@ body.is-loading #sidebar nav ul li {
         background-attachment: scroll;
     }
 }
+
+
+/* Person
+   ========================================================================== */
+
+.w-person {
+    max-width: 350px;
+}
+
+.w-person-content {
+    padding-bottom: 10px;
+}
+
+.w-person-name {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.w-person-link .w-person-name {
+    color: inherit;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.w-person-role {
+    font-size: 0.9em;
+    margin: 3px 0;
+    opacity: 0.5;
+}
+
+.w-person-description {
+    margin: 10px 0;
+}
+
+.w-person-links-item {
+    font-size: 18px;
+    line-height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    color: #4d78a3;
+}
+
+.wrap {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.wrap-center {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrap-center-three-columns {
+    width: 70%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.img-center {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-one {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-two {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    margin-left: auto;
+    margin-right: auto;
+}
