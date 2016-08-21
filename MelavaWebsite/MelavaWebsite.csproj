@@ -199,6 +199,7 @@
     <Compile Include="Common\ExcelManager.cs" />
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -392,6 +393,7 @@
     <Content Include="Views\Registration\Venue.cshtml" />
     <Content Include="Views\Registration\AboutUs.cshtml" />
     <Content Include="Views\Registration\Login.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

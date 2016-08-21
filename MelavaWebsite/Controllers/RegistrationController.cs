@@ -167,10 +167,17 @@ namespace MelavaWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                persondetails.CreatedDate = DateTime.Now;
-                db.Persons.Add(persondetails);
-                db.SaveChanges();
-                helper.SendEmail(persondetails.Email);
+                try
+                {
+                    persondetails.CreatedDate = DateTime.Now;
+                    db.Persons.Add(persondetails);
+                    db.SaveChanges();
+                    helper.SendEmail(persondetails.Email);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
                 return RedirectToAction("Index");
             }
             return View(persondetails);
