@@ -31,7 +31,6 @@ namespace MelavaWebsite.Models
         [Display(Name = "Second Gotra")]
         public string SecondGotra { get; set; }
 
-        [Required(ErrorMessage = "Please enter Date of Birth.")]
         [Display(Name = "Date of Birth")]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfBirth { get; set; }
@@ -45,7 +44,7 @@ namespace MelavaWebsite.Models
 
         [Required(ErrorMessage = "Please enter Height.")]
         [Display(Name = "Height")]
-        public string Height { get; set; }
+        public decimal Height { get; set; }
 
         [Required(ErrorMessage = "Please select Gender.")]
         [Display(Name = "Gender")]
@@ -63,11 +62,17 @@ namespace MelavaWebsite.Models
         [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
 
+        [Required(ErrorMessage = "Please enter age.")]
+        [Display(Name = "Age")]
+        public int Age { get; set; }
+
         [Required(ErrorMessage = "Please enter Email Address.")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Please enter valid email address.")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
+        [Display(Name = "Anubandh Id")]
+        public long AnubandhId { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 

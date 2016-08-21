@@ -9,7 +9,7 @@
 <body>
     <div id="wrapper">
 
-       @* <!-- Intro -->
+        @* <!-- Intro -->
         <section id="intro" class="wrapper style1 fullscreen align-center">
             <div class="inner">
                 <img class="img-circle" style="float: left" src="~/Images/KanyakaParmeshwari.jpg" height="600px" />
@@ -73,35 +73,35 @@
                                     @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender", new { @class = "form-control" })
                                 </div>
                                 <div class="field half">
-                                    @Html.LabelFor(m => m.DateOfBirth)
-                                    @Html.TextBoxFor(m => m.DateOfBirth)
+                                    @Html.LabelFor(m => m.Age)
+                                    @Html.TextBoxFor(m => m.Age)
                                 </div>
 
                                 <div class="field half first">
-                                    @Html.LabelFor(m => m.BirthPlace)
-                                    @Html.TextBoxFor(m => m.BirthPlace)
+                                    @Html.LabelFor(m => m.Height)
+                                    @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x / 10F)), "Select Height", new { @class = "form-control" })
                                 </div>
                                 <div class="field half">
-                                    @Html.LabelFor(m => m.Height)
-                                    @Html.TextBoxFor(m => m.Height)
-                                </div>
-
-                                <div class="field half first">
                                     @Html.LabelFor(m => m.Education)
                                     @Html.TextBoxFor(m => m.Education)
                                 </div>
-                                <div class="field half">
+
+                                <div class="field half first">
                                     @Html.LabelFor(m => m.Occupation)
                                     @Html.TextBoxFor(m => m.Occupation)
                                 </div>
-
-                                <div class="field half first">
+                                <div class="field half">
                                     @Html.LabelFor(m => m.Address)
                                     @Html.TextBoxFor(m => m.Address)
                                 </div>
-                                <div class="field half">
+
+                                <div class="field half first">
                                     @Html.LabelFor(m => m.ContactNumber)
                                     @Html.TextBoxFor(m => m.ContactNumber)
+                                </div>
+                                <div class="field half">
+                                    @Html.LabelFor(m => m.AnubandhId)
+                                    @Html.TextBoxFor(m => m.AnubandhId)
                                 </div>
 
                                 <div class="field">
@@ -147,7 +147,7 @@
             </section>
         }
 
-       @* <!-- Four-->
+        @* <!-- Four-->
         <section id="four" class="wrapper style1 fade-up">
             <div class="inner">
                 <h2>Login</h2>

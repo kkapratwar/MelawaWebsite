@@ -47,7 +47,7 @@ namespace MelavaWebsite.Controllers
             return View();
 
         }
-        
+
         // GET: /Registration/
 
         public ActionResult Index()
@@ -217,20 +217,21 @@ namespace MelavaWebsite.Controllers
         {
             List<ExcelColumConfiguration> columnList = new List<ExcelColumConfiguration>();
             columnList.Add(new ExcelColumConfiguration { ColumnIndex = 0, DBColumnName = "Id", ColumnHeaderName = "Candidate Id", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 1, DBColumnName = "Name", ColumnHeaderName = "Name", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 2, DBColumnName = "BirthName", ColumnHeaderName = "Birth Name", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 3, DBColumnName = "FirstGotra", ColumnHeaderName = "First Gotra", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 4, DBColumnName = "SecondGotra", ColumnHeaderName = "Second Gotra", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 5, DBColumnName = "Gender", ColumnHeaderName = "Gender", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 6, DBColumnName = "DateOfBirth", ColumnHeaderName = "Date Of Birth", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 7, DBColumnName = "Height", ColumnHeaderName = "Height", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 8, DBColumnName = "Education", ColumnHeaderName = "Education", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 9, DBColumnName = "BirthPlace", ColumnHeaderName = "Birth Place", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 10, DBColumnName = "Occupation", ColumnHeaderName = "Occupation", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 11, DBColumnName = "ContactNumber", ColumnHeaderName = "Contact Number", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 12, DBColumnName = "Email", ColumnHeaderName = "Email", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 13, DBColumnName = "Address", ColumnHeaderName = "Address", ColumnWidth = 15 * 256 });
-            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 14, DBColumnName = "CreatedDate", ColumnHeaderName = "Created Date", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 1, DBColumnName = "AnubandhId", ColumnHeaderName = "Anubandh Id", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 2, DBColumnName = "Name", ColumnHeaderName = "Name", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 3, DBColumnName = "BirthName", ColumnHeaderName = "Birth Name", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 4, DBColumnName = "FirstGotra", ColumnHeaderName = "First Gotra", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 5, DBColumnName = "SecondGotra", ColumnHeaderName = "Second Gotra", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 6, DBColumnName = "Gender", ColumnHeaderName = "Gender", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 7, DBColumnName = "Age", ColumnHeaderName = "Age", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 8, DBColumnName = "Height", ColumnHeaderName = "Height", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 9, DBColumnName = "Education", ColumnHeaderName = "Education", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 10, DBColumnName = "BirthPlace", ColumnHeaderName = "Birth Place", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 11, DBColumnName = "Occupation", ColumnHeaderName = "Occupation", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 12, DBColumnName = "ContactNumber", ColumnHeaderName = "Contact Number", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 13, DBColumnName = "Email", ColumnHeaderName = "Email", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 14, DBColumnName = "Address", ColumnHeaderName = "Address", ColumnWidth = 15 * 256 });
+            columnList.Add(new ExcelColumConfiguration { ColumnIndex = 15, DBColumnName = "CreatedDate", ColumnHeaderName = "Created Date", ColumnWidth = 15 * 256 });
             return columnList;
         }
     }
