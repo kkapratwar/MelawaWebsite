@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_reportLayout.cshtml";
 }
-<div class="align-center">
+<div class="align-center" style="padding: 0 15px 0 0">
     <button style="float: right" type="button" id="addressSearch"
                 onclick="location.href = '@Url.Action("ExportList", "Registration")'">
         Export List
@@ -16,6 +16,7 @@
 
 </div>
 <h3>Candidate Registration Details </h3>
+<br />
 <table>
     <tr>
         <th>

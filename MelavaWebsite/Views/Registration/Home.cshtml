@@ -2,23 +2,96 @@
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
 }
-
+<header>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/custom.css" />
+    <script type="text/javascript" src="@Url.Content("~/Content/Slicebox/")js/modernizr.custom.46884.js"></script>
+</header>
 <body>
     <div id="wrapper">
 
         <!-- Intro -->
         <section id="intro" class="wrapper style1 fullscreen align-center">
-            <div class="inner">
+            @*<div class="inner">
                 <img class="img-circle half first" style="float: left" src="~/Images/KanyakaParmeshwari.jpg" height="500px" />
                 <h1>Arya Vaishya Melava, Kinwat</h1>
                 <p>
                     Comins Soon....
                 </p>
-                <button class="btn btn-info" type="button" id="btnLaunch" onclick="location.href='@Url.Action("Register", "Registration")'">
+                <button class="btn btn-info" type="button" id="btnLaunch" onclick="location.href = '@Url.Action("Register", "Registration")'">
                     Launch Website</button>
+            </div>*@
+            <div class="wrapper-slider">
+
+                <ul id="sb-slider" class="sb-slider">
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/1.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Creative Lifesaver</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/2.jpg" alt="image2" />
+                        <div class="sb-description">
+                            <h3>Honest Entertainer</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/3.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Brave Astronaut</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/4.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Affectionate Decision Maker</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/5.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Faithful Investor</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/6.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Groundbreaking Artist</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="@Url.Content("~/Content/Slicebox/")images/7.jpg" alt="image1" />
+                        <div class="sb-description">
+                            <h3>Selfless Philantropist</h3>
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="shadow" class="shadow"></div>
+
+                <div id="nav-arrows" class="nav-arrows">
+                    <a href="#">Next</a>
+                    <a href="#">Previous</a>
+                </div>
+
+                <div id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
         </section>
     </div>
+
+
+    <!-- /wrapper -->
 
     <!-- Footer -->
     <footer id="footer" class="wrapper style1-alt">
@@ -29,4 +102,83 @@
             </ul>
         </div>
     </footer>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/Slicebox/")js/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var Page = (function () {
+
+                var $navArrows = $('#nav-arrows').hide(),
+                    $navDots = $('#nav-dots').hide(),
+                    $nav = $navDots.children('span'),
+                    $shadow = $('#shadow').hide(),
+                    slicebox = $('#sb-slider').slicebox({
+                        onReady: function () {
+
+                            $navArrows.show();
+                            $navDots.show();
+                            $shadow.show();
+
+                        },
+                        onBeforeChange: function (pos) {
+
+                            $nav.removeClass('nav-dot-current');
+                            $nav.eq(pos).addClass('nav-dot-current');
+
+                        }
+                    }),
+
+                    init = function () {
+
+                        initEvents();
+
+                    },
+                    initEvents = function () {
+
+                        // add navigation events
+                        $navArrows.children(':first').on('click', function () {
+
+                            slicebox.next();
+                            return false;
+
+                        });
+
+                        $navArrows.children(':last').on('click', function () {
+
+                            slicebox.previous();
+                            return false;
+
+                        });
+
+                        $nav.each(function (i) {
+
+                            $(this).on('click', function (event) {
+
+                                var $dot = $(this);
+
+                                if (!slicebox.isActive()) {
+
+                                    $nav.removeClass('nav-dot-current');
+                                    $dot.addClass('nav-dot-current');
+
+                                }
+
+                                slicebox.jump(i + 1);
+                                return false;
+
+                            });
+
+                        });
+
+                    };
+
+                return { init: init };
+
+            })();
+
+            Page.init();
+
+        });
+		</script>
 </body>
