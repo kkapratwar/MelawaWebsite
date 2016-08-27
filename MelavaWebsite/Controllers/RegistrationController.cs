@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CaptchaMvc.HtmlHelpers;
 using MelavaWebsite.Common;
 using MelavaWebsite.Models;
 using NPOI.HSSF.UserModel;
@@ -84,6 +85,7 @@ namespace MelavaWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Persons.Add(persondetails);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -169,20 +171,35 @@ namespace MelavaWebsite.Controllers
             {
                 try
                 {
+                    //if (this.IsCaptchaValid("Captcha is not valid"))
+                    //{
+
+                    //    return RedirectToAction("ThankYouPage");
+                    //}  
+
+                    if (Request.Files.Count > 0)
+                    {
+                        var file = Request.Files[0];
+                        if (file != null && (!string.IsNullOrEmpty(file.FileName)))
+                        {
+                            file.SaveAs(HttpContext.Server.MapPath("~/CandidatePhotos/") + file.FileName);
+                            persondetails.ImagePath = "~/CandidatePhotos/" + file.FileName;
+                        }
+                    }
                     persondetails.CreatedDate = DateTime.Now;
                     db.Persons.Add(persondetails);
                     db.SaveChanges();
-                    helper.SendEmail(persondetails.Email);
+                    ViewData["Success"] = "Success";
+                    helper.SendEmail(persondetails);
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             return View(persondetails);
         }
-
 
         protected override void Dispose(bool disposing)
         {

@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CaptchaMvc">
+      <HintPath>..\packages\CaptchaMvc.Mvc4.1.5.0\lib\net40-full\CaptchaMvc.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -198,9 +201,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\ExcelManager.cs" />
     <Compile Include="Common\Helper.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -223,6 +224,8 @@
     <Content Include="Content\hyperspacetemplate\assets\js\main.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\skel.min.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\util.js" />
+    <Content Include="Content\hyperspacetemplate\images\b-1.png" />
+    <Content Include="Content\hyperspacetemplate\images\bg-1.png" />
     <Content Include="Content\hyperspacetemplate\images\pic01.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic02.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic03.jpg" />
@@ -299,6 +302,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="EmailTemplate\Success.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\hyperspacetemplate\assets\css\images\intro.svg" />
@@ -344,12 +348,20 @@
     <Content Include="Content\hyperspacetemplate\assets\fonts\Chunkfive.eot" />
     <Content Include="Content\hyperspacetemplate\assets\fonts\Chunkfive.otf" />
     <Content Include="Content\hyperspacetemplate\assets\fonts\Chunkfive.woff" />
+    <None Include="Properties\PublishProfiles\New.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="Images\imgAudumebrK.jpg" />
-    <Content Include="Images\imgDinkarC.jpg" />
-    <Content Include="Images\imgPromodU.jpg" />
-    <Content Include="Images\imgSanjayK.jpg" />
+    <Content Include="Images\AboutUs\imgAudumebrK.jpg" />
+    <Content Include="Images\AboutUs\imgDinkarC.jpg" />
+    <Content Include="Images\AboutUs\imgGajananD.jpg" />
+    <Content Include="Images\AboutUs\imgPromodU.jpg" />
+    <Content Include="Images\AboutUs\imgSahilK.jpg" />
+    <Content Include="Images\AboutUs\imgSanjayK.jpg" />
+    <Content Include="Images\AboutUs\imgUdayG.jpg" />
     <Content Include="Images\KanyakaParmeshwari.jpg" />
+    <Content Include="Images\Logo\logo-one.png" />
+    <Content Include="Images\Logo\logo-one.jpeg" />
+    <Content Include="Images\Logo\logo-two.jpeg" />
+    <Content Include="Images\Logo\success-icon.png" />
     <Content Include="Images\phoneIcon.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -372,7 +384,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -388,24 +399,11 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_hyperspaceLayout.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Registration\Index.cshtml" />
     <Content Include="Views\Registration\Details.cshtml" />
     <Content Include="Views\Registration\Create.cshtml" />
@@ -420,9 +418,11 @@
     <Content Include="Views\Registration\AboutUs.cshtml" />
     <Content Include="Views\Registration\Login.cshtml" />
     <Content Include="Views\Shared\NotFound.cshtml" />
+    <Content Include="Views\Registration\ThankYouPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CandidatePhotos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

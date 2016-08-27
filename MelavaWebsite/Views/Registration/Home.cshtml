@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/slicebox.css" />
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/custom.css" />
     <script type="text/javascript" src="@Url.Content("~/Content/Slicebox/")js/modernizr.custom.46884.js"></script>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </header>
 <body>
     <div id="wrapper">
@@ -22,7 +28,17 @@
                 <button class="btn btn-info" type="button" id="btnLaunch" onclick="location.href = '@Url.Action("Register", "Registration")'">
                     Launch Website</button>
             </div>*@
-            <div class="wrapper-slider">
+
+            <div class="inner">
+                <h1>आर्य वैश्य परिचय मेळावा, किनवट</h1>
+                <h2>दि. 06-11-2016</h2>
+                <img src="../../Images/Logo/logo-one.png" alt="image1" height="350" width="450" />
+                <div>
+                    <img src="~/Content/hyperspacetemplate/images/b-1.png">
+                    <h2>Coming Soon..</h2>
+                </div>
+            </div>
+            @*     <div class="wrapper-slider">
 
                 <ul id="sb-slider" class="sb-slider">
                     <li>
@@ -86,7 +102,7 @@
                     <span></span>
                 </div>
 
-            </div>
+            </div>*@
         </section>
     </div>
 
@@ -180,5 +196,5 @@
             Page.init();
 
         });
-		</script>
+    </script>
 </body>

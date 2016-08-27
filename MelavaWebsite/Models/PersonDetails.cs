@@ -15,11 +15,10 @@ namespace MelavaWebsite.Models
         [Display(Name = "Candidate Id")]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter Name.")]
+        [Required(ErrorMessage = "Please enter Full Name.")]
         [Display(Name = "Full Name")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Please enter Birth Name or enter '-'.")]
         [Display(Name = "Birth Name")]
         public string BirthName { get; set; }
 
@@ -42,7 +41,7 @@ namespace MelavaWebsite.Models
         [Display(Name = "Education")]
         public string Education { get; set; }
 
-        [Required(ErrorMessage = "Please enter Height.")]
+        [Required(ErrorMessage = "Please select Height.")]
         [Display(Name = "Height")]
         public decimal Height { get; set; }
 
@@ -62,18 +61,23 @@ namespace MelavaWebsite.Models
         [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
 
-        [Required(ErrorMessage = "Please enter age.")]
+        [Required(ErrorMessage = "Please enter Age.")]
         [Display(Name = "Age")]
         public int Age { get; set; }
 
-        [Required(ErrorMessage = "Please enter Email Address.")]
-        [DataType(DataType.EmailAddress, ErrorMessage = "Please enter valid email address.")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Please enter valid E-mail Address.")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Display(Name = "Anubandh Id")]
-        public long AnubandhId { get; set; }
+        public int? AnubandhId { get; set; }
+
         public DateTime CreatedDate { get; set; }
+
+        [Display(Name = "Upload Photo")]
+        public string ImagePath { get; set; }
+
+
     }
 
     public class DbPersonDetails : DbContext
