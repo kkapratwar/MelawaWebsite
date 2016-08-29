@@ -16,6 +16,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
     font-family: ChunkFive Regular;
+    color: maroon;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1697,7 +1698,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
+    color: maroon;
     font-weight: bold;
     line-height: 1.5;
     margin: 0 0 0.5em 0;
@@ -2839,6 +2840,7 @@ ul.contact {
 ul.menu {
     list-style: none;
     padding: 0;
+    margin-right: 2em;
 }
 
     ul.menu > li {
@@ -3225,7 +3227,7 @@ table {
 @media screen and (max-width: 1680px) {
 
     .wrapper > .inner {
-        padding: 4em 4em 2em 4em;
+        padding: 1em 4em 2em 4em;
     }
 }
 
@@ -4070,4 +4072,18 @@ ul.topnav {
                 display: block;
                 text-align: left;
             }
+}
+
+.text-wrapper {
+    width:600px;
+    margin: 0 auto;
+}
+
+#block1 {
+    float:left;
+}
+
+#block2
+{
+    float:right;
 }

@@ -56,6 +56,11 @@ namespace MelavaWebsite.Controllers
             return View(db.Persons.ToList());
         }
 
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+
         //
         // GET: /Registration/Details/5
 
