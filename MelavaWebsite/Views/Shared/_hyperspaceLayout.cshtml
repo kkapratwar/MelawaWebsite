@@ -40,18 +40,28 @@
             <button class="btn-style">Home</button></a></li>
         @*<li><a href="@Url.Action("ProgramDetails", "Registration")">Program Details</a></li>
                     <li><a href="@Url.Action("Venue", "Registration")">Venue</a></li>*@
+        <li><a href="@Url.Action("AboutUs", "Registration")">
+            <button class="btn-style">About</button></a></li>
         <li><a href="@Url.Action("Register", "Registration")">
             <button class="btn-style">Registration</button></a></li>
-        <li><a href="@Url.Action("AboutUs", "Registration")">
-            <button class="btn-style">About Us</button></a></li>
+        <li><a href="@Url.Action("ContactUs", "Registration")">
+            <button class="btn-style">Contact Us</button></a></li>
         <li><a href="@Url.Action("Login", "Registration")">
             <button class="btn-style">Login</button></a></li>
         <li class="icon">
             <a href="javascript:void(0);" style="font-size: 15px;" onclick="myFunction()">☰</a>
         </li>
     </ul>
-    <div>
-        @RenderBody()
-    </div>
+<div>
+    @RenderBody()
+</div>
+    <footer class="style1-alt align-right">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Durga Software Technologies. All rights reserved.</li>
+                <li>Designed By: Kalyan Kapratwar</li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

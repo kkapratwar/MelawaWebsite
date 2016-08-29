@@ -241,6 +241,7 @@
     <Content Include="Content\hyperspacetemplate\images\pic06.jpg" />
     <Content Include="Content\hyperspacetemplate\images\program-details.png" />
     <Content Include="Content\hyperspacetemplate\images\rangnath-maharaj.png" />
+    <Content Include="Content\hyperspacetemplate\images\temple.jpg" />
     <Content Include="Content\hyperspacetemplate\images\wood-pattern-bg.png" />
     <Content Include="Content\hyperspacetemplate\images\wood-strip.png" />
     <Content Include="Content\Slicebox\css\custom.css" />
