@@ -226,12 +226,14 @@
     <Content Include="Content\hyperspacetemplate\assets\js\util.js" />
     <Content Include="Content\hyperspacetemplate\images\b-1.png" />
     <Content Include="Content\hyperspacetemplate\images\bg-1.png" />
+    <Content Include="Content\hyperspacetemplate\images\button-1.png" />
     <Content Include="Content\hyperspacetemplate\images\pic01.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic02.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic03.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic04.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic05.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic06.jpg" />
+    <Content Include="Content\hyperspacetemplate\images\wood-pattern-bg.png" />
     <Content Include="Content\Slicebox\css\custom.css" />
     <Content Include="Content\Slicebox\css\demo.css" />
     <Content Include="Content\Slicebox\css\slicebox.css" />
