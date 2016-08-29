@@ -3,10 +3,6 @@
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
 }
 <header>
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/slicebox.css" />
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Slicebox/")css/custom.css" />
-    <script type="text/javascript" src="@Url.Content("~/Content/Slicebox/")js/modernizr.custom.46884.js"></script>
     <style>
         img {
             max-width: 100%;
@@ -19,182 +15,58 @@
 
         <!-- Intro -->
         <section class="wrapper style1 fullscreen align-center">
-            @*<div class="inner">
-                <img class="img-circle half first" style="float: left" src="~/Images/KanyakaParmeshwari.jpg" height="500px" />
-                <h1>Arya Vaishya Melava, Kinwat</h1>
-                <p>
-                    Comins Soon....
-                </p>
-                <button class="btn btn-info" type="button" id="btnLaunch" onclick="location.href = '@Url.Action("Register", "Registration")'">
-                    Launch Website</button>
-            </div>*@
-
             <div class="inner">
-                <h1>आर्य वैश्य परिचय मेळावा, किनवट</h1>
-                <h2>दि. 06-11-2016</h2>
-                <img src="../../Images/Logo/logo-one.png" alt="image1" height="350" width="450" />
+                <h5>|| वेदांत केसरी ब्र.भु.रंगनाथ महाराज प्रसन्न ||</h5>
+                <img src="~/Content/hyperspacetemplate/images/rangnath-maharaj.png" alt="image1" height="300" width="100"/>
+                <p>माता कन्यका परमेश्वरी व रंगनाथ महाराजांच्या चरणी विनम्र अभिवादन करून समाज बांधवाना किनवट येथील चौथ्या उपवधू –उपवर परिचय मेळाव्याचे सस्नेह निमंत्रण ! </p>
+                <h4>सप्रेम नमस्कार,</h4>
+                <p>ता.०६ नोव्हेंबर २०१६ रविवार रोजी किनवट नगरीत चौथ्या वधू – वर परिचय मेळाव्याचा उद्घाटन सोहळा खालील मान्यवरांच्या उपस्थितीत संपन्न होणार आहे.</p>
+                <div class="split">
+                    <section>
+                        <img src="../../Images/Logo/logo-one.png" alt="image1" height="150" width="350"/>
+                    </section>
+                    <section>
+                        <img src="~/Content/hyperspacetemplate/images/nameplate.png" alt="image1" width="200"/>
+                        <br/>
+                        <h3>• मा.ना.श्री सुधीरभाऊ मूनगंटीवार </h3>
+                        अर्थ व नियोजन, वनमंत्री महाराष्ट्र राज्य
+                        <h3>• मा.ना.श्री मदनभाऊ येरावार </h3>ऊर्जा,पर्यटन,अन्न व औषध प्रशासन,सार्वजनिक बांधकाम,(सामान्य प्रशासन) राज्यमंत्री महाराष्ट्र राज्य
+                    </section>
+                    <section>
+                        <H3>• मा.ना.श्री समिरभाऊ कुनावार</H3>आमदार, हिंगणघाट
+                        <H3>• मा.श्री नंदकुमार गादेवार</H3> अध्यक्ष,अखिल भारतीय आर्यवैश्य महासभा, पुणे
+                        <H3>• मा.श्री दिलीप कंदकुर्ते</H3> अध्यक्ष,महाराष्ट्र प्रदेश व्यापारी आघाडी
+                        <H3>• मा.एकनाथ मामडे</H3>अध्यक्ष,महाराष्ट्र आर्यवैश्य महासभा, नांदेड
+                    </section>
+                    </div>
                 <div>
-                    <img src="~/Content/hyperspacetemplate/images/b-1.png">
-                    <h2>Coming Soon..</h2>
+                    <img src="~/Content/hyperspacetemplate/images/wood-strip.png" alt="image1" width="300"/>
                 </div>
+                @*<div >
+                    <img src="~/Content/hyperspacetemplate/images/program-details-img.png" width="600"/>
+                </div>*@
+                <div class="split">
+                    <section>
+                        <h3>:: कार्यक्रम दिनांक ::</h3>
+                        <h3>0६ - नोव्हेम्बर - २०१६ (रविवार)</h3>
+                        <h3> कार्यक्रमाचे उद्घाटन - सकाळी ८:00 वा.</h3>
+                    </section>
+                    <section>
+                        <h3>:: कार्यक्रम स्थळ ::</h3>
+                        <h3>एन.के.गार्डन, गोकुंदा रोड,</h3>
+                        <h3> उपविभागीय कार्यालया जवळ,किनवट</h3>
+                    </section>
+                    <section>
+                        <h3>:: निशुल्क अल्पोपहार व भोजन ::</h3>
+                        <h3>चहा व अल्पोपहार ०८ ते १० </h3>
+                        <h3>भोजन १२ ते ०३.३० पर्यंत </h3>
+                    </section>
+                </div>
+                
+
             </div>
-            @*     <div class="wrapper-slider">
-
-                <ul id="sb-slider" class="sb-slider">
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/1.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Creative Lifesaver</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/2.jpg" alt="image2" />
-                        <div class="sb-description">
-                            <h3>Honest Entertainer</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/3.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Brave Astronaut</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/4.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Affectionate Decision Maker</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/5.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Faithful Investor</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/6.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Groundbreaking Artist</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="@Url.Content("~/Content/Slicebox/")images/7.jpg" alt="image1" />
-                        <div class="sb-description">
-                            <h3>Selfless Philantropist</h3>
-                        </div>
-                    </li>
-                </ul>
-
-                <div id="shadow" class="shadow"></div>
-
-                <div id="nav-arrows" class="nav-arrows">
-                    <a href="#">Next</a>
-                    <a href="#">Previous</a>
-                </div>
-
-                <div id="nav-dots" class="nav-dots">
-                    <span class="nav-dot-current"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-            </div>*@
         </section>
     </div>
-
-
-    <!-- /wrapper -->
-
-    <!-- Footer -->
-    <footer class="style1-alt align-right">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Durga Software Technologies. All rights reserved.</li>
-                <li>Designed By: Kalyan Kapratwar</li>
-            </ul>
-        </div>
-    </footer>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/Slicebox/")js/jquery.slicebox.js"></script>
-    <script type="text/javascript">
-        $(function () {
-
-            var Page = (function () {
-
-                var $navArrows = $('#nav-arrows').hide(),
-                    $navDots = $('#nav-dots').hide(),
-                    $nav = $navDots.children('span'),
-                    $shadow = $('#shadow').hide(),
-                    slicebox = $('#sb-slider').slicebox({
-                        onReady: function () {
-
-                            $navArrows.show();
-                            $navDots.show();
-                            $shadow.show();
-
-                        },
-                        onBeforeChange: function (pos) {
-
-                            $nav.removeClass('nav-dot-current');
-                            $nav.eq(pos).addClass('nav-dot-current');
-
-                        }
-                    }),
-
-                    init = function () {
-
-                        initEvents();
-
-                    },
-                    initEvents = function () {
-
-                        // add navigation events
-                        $navArrows.children(':first').on('click', function () {
-
-                            slicebox.next();
-                            return false;
-
-                        });
-
-                        $navArrows.children(':last').on('click', function () {
-
-                            slicebox.previous();
-                            return false;
-
-                        });
-
-                        $nav.each(function (i) {
-
-                            $(this).on('click', function (event) {
-
-                                var $dot = $(this);
-
-                                if (!slicebox.isActive()) {
-
-                                    $nav.removeClass('nav-dot-current');
-                                    $dot.addClass('nav-dot-current');
-
-                                }
-
-                                slicebox.jump(i + 1);
-                                return false;
-
-                            });
-
-                        });
-
-                    };
-
-                return { init: init };
-
-            })();
-
-            Page.init();
-
-        });
-    </script>
 </body>
+
