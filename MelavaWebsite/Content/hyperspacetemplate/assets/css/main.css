@@ -1685,7 +1685,7 @@ a {
     }
 
 strong, b {
-    color: #ffffff;
+    color: maroon;
     font-weight: bold;
 }
 
@@ -3241,7 +3241,7 @@ table {
 @media screen and (max-width: 736px) {
 
     .wrapper > .inner {
-        padding: 3em 2em 1em 2em;
+        padding: 0em 2em 1em 2em;
     }
 }
 
@@ -3945,7 +3945,7 @@ body.is-loading #sidebar nav ul li {
 .w-person-role {
     font-size: 0.9em;
     margin: 3px 0;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .w-person-description {
@@ -4025,7 +4025,7 @@ ul.topnav {
 
         ul.topnav li a {
             display: inline-block;
-            color: #f2f2f2;
+            /*color: #f2f2f2;*/
             text-align: center;
             padding: 5px 16px;
             text-decoration: none;
