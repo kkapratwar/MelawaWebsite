@@ -229,6 +229,7 @@
     <Content Include="Content\hyperspacetemplate\images\button-1.png" />
     <Content Include="Content\hyperspacetemplate\images\button.png" />
     <Content Include="Content\hyperspacetemplate\images\home-title.png" />
+    <Content Include="Content\hyperspacetemplate\images\k-p.jpg" />
     <Content Include="Content\hyperspacetemplate\images\nameplate.png" />
     <Content Include="Content\hyperspacetemplate\images\natural-paper.png" />
     <Content Include="Content\hyperspacetemplate\images\nice-snow.png" />
@@ -240,6 +241,7 @@
     <Content Include="Content\hyperspacetemplate\images\pic05.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic06.jpg" />
     <Content Include="Content\hyperspacetemplate\images\program-details.png" />
+    <Content Include="Content\hyperspacetemplate\images\program-info.png" />
     <Content Include="Content\hyperspacetemplate\images\rangnath-maharaj.png" />
     <Content Include="Content\hyperspacetemplate\images\temple.jpg" />
     <Content Include="Content\hyperspacetemplate\images\wood-pattern-bg.png" />
