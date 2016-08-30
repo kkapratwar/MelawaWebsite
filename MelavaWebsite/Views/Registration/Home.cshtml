@@ -3,12 +3,12 @@
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
 }
 <header>
-    <style>
+    @* <style>
         img {
             max-width: 100%;
             height: auto;
         }
-    </style>
+    </style>*@
 </header>
 <body>
     <div id="wrapper">
@@ -16,50 +16,88 @@
         <!-- Intro -->
         <section class="wrapper style1 fullscreen align-center fade-up">
             <div class="inner">
-                <h5>|| वेदांत केसरी ब्र.भु.रंगनाथ महाराज प्रसन्न ||</h5>
-                <img src="~/Content/hyperspacetemplate/images/rangnath-maharaj.png" alt="image1" height="300" width="100"/>
-                <p>माता कन्यका परमेश्वरी व रंगनाथ महाराजांच्या चरणी विनम्र अभिवादन करून समाज बांधवाना किनवट येथील चौथ्या उपवर-उपवधू परिचय मेळाव्याचे सस्नेह निमंत्रण ! </p>
-                <h4>सप्रेम नमस्कार,</h4>
-                <p>ता.०६ नोव्हेंबर २०१६ रविवार रोजी किनवट नगरीत चौथ्या वधू – वर परिचय मेळाव्याचा उद्घाटन सोहळा खालील मान्यवरांच्या उपस्थितीत संपन्न होणार आहे.</p>
+                <h2>चौथा एक दिवसीय उपवर - उपवधू परिचय मेळावा</h2>
                 <div class="split">
                     <section>
-                        <img src="../../Images/Logo/logo-one.png" alt="image1" height="150" width="350"/>
+                        <img src="../../Images/Logo/logo-one.png" alt="image1" height="150" width="370" />
                     </section>
                     <section>
-                        <img src="~/Content/hyperspacetemplate/images/nameplate.png" alt="image1" width="200"/>
-                        <br/>
-                        <h3>• मा.ना.श्री सुधीरभाऊ मूनगंटीवार </h3>
-                        अर्थ व नियोजन, वनमंत्री महाराष्ट्र राज्य
-                        <h3>• मा.ना.श्री मदनभाऊ येरावार </h3>ऊर्जा,पर्यटन,अन्न व औषध प्रशासन,सार्वजनिक बांधकाम,(सामान्य प्रशासन) राज्यमंत्री महाराष्ट्र राज्य
+                        <img src="~/Content/hyperspacetemplate/images/program-info.png" alt="image1" height="150" width="450" style="margin-top: 0.8em" />
                     </section>
-                    <section>
-                        <H3>• मा.ना.श्री समिरभाऊ कुनावार</H3>आमदार, हिंगणघाट
-                        <H3>• मा.श्री नंदकुमार गादेवार</H3> अध्यक्ष,अखिल भारतीय आर्यवैश्य महासभा, पुणे
-                        <H3>• मा.श्री दिलीप कंदकुर्ते</H3> अध्यक्ष,महाराष्ट्र प्रदेश व्यापारी आघाडी
-                        <H3>• मा.एकनाथ मामडे</H3>अध्यक्ष,महाराष्ट्र आर्यवैश्य महासभा, नांदेड
-                    </section>
-                    </div>
-                <div>
-                    <img src="~/Content/hyperspacetemplate/images/wood-strip.png" alt="image1" width="300"/>
                 </div>
-                @*<div >
-                    <img src="~/Content/hyperspacetemplate/images/program-details-img.png" width="600"/>
-                </div>*@
+                <div class="align-center">
+                    <a href="@Url.Action("Register", "Registration")">Click here for Registration / उपवर - उपवधू निशुल्क नोंदणी साठी येथे क्लिक करा</a>
+                </div>
+                <br />
+                <div>
+                    <div class="split">
+                        <section>
+                            <h5>|| कन्यका परमेश्वरी प्रसन्न ||</h5>
+                            <img src="~/Content/hyperspacetemplate/images/k-p.jpg" alt="image1" height="300" width="100" />
+                        </section>
+                        <section>
+                            <h5>|| वेदांत केसरी ब्र.भु.रंगनाथ महाराज प्रसन्न ||</h5>
+                            <img src="~/Content/hyperspacetemplate/images/rangnath-maharaj.png" alt="image1" height="300" width="100" />
+                        </section>
+                    </div>
+                    <p>माता कन्यका परमेश्वरी व रंगनाथ महाराजांच्या चरणी विनम्र अभिवादन करून समाज बांधवाना किनवट येथील चौथ्या उपवर-उपवधू परिचय मेळाव्याचे सस्नेह निमंत्रण ! </p>
+                    <h4>सप्रेम नमस्कार,</h4>
+                    <p>ता.०६ नोव्हेंबर २०१६ रविवार रोजी किनवट नगरीत चौथ्या वधू – वर परिचय मेळाव्याचा उद्घाटन सोहळा खालील मान्यवरांच्या उपस्थितीत संपन्न होणार आहे.</p>
+
+                    <img src="~/Content/hyperspacetemplate/images/wood-strip-1.png" alt="image1" width="300" />
+                    <div class="split">
+                        <section>
+                            <h3>मा. ना. श्री सुधीरभाऊ मूनगंटीवार </h3>
+                            अर्थ व नियोजन, वनमंत्री महाराष्ट्र राज्य
+                        </section>
+                        <section>
+                            <h3>मा. ना. श्री मदनभाऊ येरावार </h3>
+                            ऊर्जा,पर्यटन,अन्न व औषध प्रशासन,सार्वजनिक बांधकाम,(सामान्य प्रशासन) राज्यमंत्री महाराष्ट्र राज्य
+                        </section>
+                        <section>
+                            <h3>मा. ना. श्री समिरभाऊ कुनावार</h3>
+                            आमदार, हिंगणघाट
+                        </section>
+                    </div>
+                    <div class="split">
+                        <section>
+                            <h3>मा. श्री नंदकुमार गादेवार</h3>
+                            अध्यक्ष,अखिल भारतीय आर्यवैश्य महासभा, पुणे
+                        </section>
+                        <section>
+                            <h3>मा. श्री दिलीप कंदकुर्ते</h3>
+                            अध्यक्ष,महाराष्ट्र प्रदेश व्यापारी आघाडी
+                        </section>
+                        <section>
+                            <h3>मा. श्री एकनाथ मामडे</h3>
+                            अध्यक्ष,महाराष्ट्र आर्यवैश्य महासभा, नांदेड
+                        </section>
+                    </div>
+
+                    <br />
+                    <img src="~/Content/hyperspacetemplate/images/aple-vinit.png" alt="image1" width="300" />
+                    <div class="split">
+                        <section>
+                            <h3>श्री दिनकरराव चाडावार</h3>
+                            अध्यक्ष, आर्यवैश्य समाज, किनवट
+                        </section>
+                        <section>
+                            <h3>श्री प्रमोद उत्तरवार</h3>
+                            अध्यक्ष, आर्यवैश्य युवा संघटना, किनवट
+                        </section>
+                    </div>
+                    <h3>सर्व आर्यवैश्य (कोमटी) समाज बांधव,किनवट.</h3>
+                </div>
                 <div class="split">
                     <section>
-                        <h3>:: कार्यक्रम दिनांक ::</h3>
-                        <h3>0६ - नोव्हेम्बर - २०१६ (रविवार)</h3>
-                        <h3> कार्यक्रमाचे उद्घाटन - सकाळी ८:00 वा.</h3>
+                        <img src="~/Content/hyperspacetemplate/images/parichay-satra.png" alt="image1" width="300" />
+                        <h2>उद्घाटनानंतर लगेचच ...</h2>
                     </section>
                     <section>
-                        <h3>:: कार्यक्रम स्थळ ::</h3>
-                        <h3>एन.के.गार्डन, गोकुंदा रोड,</h3>
-                        <h3> उपविभागीय कार्यालया जवळ,किनवट</h3>
-                    </section>
-                    <section>
-                        <h3>:: निशुल्क अल्पोपहार व भोजन ::</h3>
+                        <img src="~/Content/hyperspacetemplate/images/bhojan-vyavstha.png" alt="image1" width="300" />
                         <h3>चहा व अल्पोपहार : सकाळी ०८ ते १० </h3>
                         <h3>भोजन : दुपारी १२ ते ०३.३० पर्यंत </h3>
+                        <h3>(चहा, अल्पोपहार व भोजन निशुल्क असेल)</h3>
                     </section>
                 </div>
             </div>
