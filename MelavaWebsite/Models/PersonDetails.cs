@@ -74,7 +74,7 @@ namespace MelavaWebsite.Models
 
         public DateTime CreatedDate { get; set; }
 
-        [Display(Name = "Upload Photo")]
+        [Display(Name = "Photo")]
         public string ImagePath { get; set; }
 
 
