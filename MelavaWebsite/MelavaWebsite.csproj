@@ -224,8 +224,10 @@
     <Content Include="Content\hyperspacetemplate\assets\js\main.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\skel.min.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\util.js" />
+    <Content Include="Content\hyperspacetemplate\images\aple-vinit.png" />
     <Content Include="Content\hyperspacetemplate\images\b-1.png" />
     <Content Include="Content\hyperspacetemplate\images\bg-1.png" />
+    <Content Include="Content\hyperspacetemplate\images\bhojan-vyavstha.png" />
     <Content Include="Content\hyperspacetemplate\images\button-1.png" />
     <Content Include="Content\hyperspacetemplate\images\button.png" />
     <Content Include="Content\hyperspacetemplate\images\home-title.png" />
@@ -234,6 +236,7 @@
     <Content Include="Content\hyperspacetemplate\images\natural-paper.png" />
     <Content Include="Content\hyperspacetemplate\images\nice-snow.png" />
     <Content Include="Content\hyperspacetemplate\images\paper-fibers.png" />
+    <Content Include="Content\hyperspacetemplate\images\parichay-satra.png" />
     <Content Include="Content\hyperspacetemplate\images\pic01.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic02.jpg" />
     <Content Include="Content\hyperspacetemplate\images\pic03.jpg" />
@@ -245,6 +248,7 @@
     <Content Include="Content\hyperspacetemplate\images\rangnath-maharaj.png" />
     <Content Include="Content\hyperspacetemplate\images\temple.jpg" />
     <Content Include="Content\hyperspacetemplate\images\wood-pattern-bg.png" />
+    <Content Include="Content\hyperspacetemplate\images\wood-strip-1.png" />
     <Content Include="Content\hyperspacetemplate\images\wood-strip.png" />
     <Content Include="Content\Slicebox\css\custom.css" />
     <Content Include="Content\Slicebox\css\demo.css" />
