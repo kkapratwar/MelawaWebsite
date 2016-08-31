@@ -84,6 +84,8 @@ namespace MelavaWebsite.Models
     public class DbPersonDetails : DbContext
     {
         public DbSet<PersonDetails> Persons { get; set; }
+
+        public DbSet<UserDetails> Users { get; set; }
     }
 
     public enum Gender

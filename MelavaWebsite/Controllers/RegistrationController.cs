@@ -49,11 +49,38 @@ namespace MelavaWebsite.Controllers
 
         }
 
+        [HttpPost]
+        public ActionResult Login(UserDetails userDetails)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = db.Users.Where(a => a.UserName.Equals(userDetails.UserName) && a.Password.Equals(userDetails.Password)).FirstOrDefault();
+                if (user != null)
+                {
+                    Session["UserID"] = user.UserId.ToString();
+                    Session["UserName"] = user.UserName.ToString();
+                    return RedirectToAction("Index"); 
+                }
+                else
+                {
+                    return RedirectToAction("Login"); 
+                }
+            }
+            return View();
+        }
+
         // GET: /Registration/
 
         public ActionResult Index()
         {
-            return View(db.Persons.ToList());
+            if (Session["UserName"] != null)
+            {
+                return View(db.Persons.ToList());
+            }
+            else
+            {
+                return RedirectToAction("Login"); 
+            }
         }
 
         public ActionResult ContactUs()
@@ -196,6 +223,11 @@ namespace MelavaWebsite.Controllers
 
             }
             return View(persondetails);
+        }
+
+        public ActionResult DesignedBy()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)

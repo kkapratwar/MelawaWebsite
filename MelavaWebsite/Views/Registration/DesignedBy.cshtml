@@ -1,5 +1,7 @@
-﻿<!DOCTYPE html>
-
+﻿@{
+    ViewBag.Title = "DesignedBy";
+    Layout = "~/Views/Shared/_desginedByLayout.cshtml";
+}
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -8,18 +10,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/hyperspacetemplate/")assets/css/main.css"/>
-    @*[if lte IE 8]><script src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/ie/html5shiv.js"></script>[endif]*@
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
-
-    <!-- Scripts -->
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.scrollex.min.js"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/jquery.scrolly.min.js"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/skel.min.js"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script type="text/javascript" src="@Url.Content("~/Content/hyperspacetemplate/")assets/js/main.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     <style>
         img {
             max-width: 100%;
@@ -27,20 +33,21 @@
         }
     </style>
 </head>
+
 <body>
-    <img src="~/Content/hyperspacetemplate/images/home-title.png" style="margin: 1em 0 0em 2em;" />
-    <br />
-    <div>
-        @RenderBody()
+    <div id="wrapper">
+        <section id="three" class="wrapper style1 fade-up" style="margin-top: 5em">
+            <div class="inner align-center">
+                <h3>Durga Xerox, Kinwat</h3>
+                <h4>Jijamata Chowk, Main Road, Kinwat</h4>
+                <h4>Contact No - 9421870087, 9423627171</h4>
+                <br />
+                <h1>&diams;</h1>
+                <h3>Durga Internet & Agencies, Yavatmal</h3>
+                <h4>Opposite to Nillawar Complex, Datta Chowk, Yavatmal</h4>
+                <h4>Contact No - 9822725539</h4>
+            </div>
+        </section>
     </div>
-    <footer class="style1-alt align-right">
-        <div class="inner">
-            <ul class="menu">
-                <li>Best viewed in Google Crome.</li>
-                <li>&copy; aryavaishyamelavakinwat.in. All rights reserved.</li>
-                <li><a href="@Url.Action("DesignedBy", "Registration")" target="_blank">Designed By: Durga, Kinwat</a></li>
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>
