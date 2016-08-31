@@ -15,12 +15,14 @@ namespace MelavaWebsite.Common
             MailMessage msg = new MailMessage();
             try
             {
-                msg.From = new MailAddress("avsmelavakinwat2016@gmail.com");
+                string fromEmail = ConfigurationManager.AppSettings["EmailAddress"];
+                string password = ConfigurationManager.AppSettings["EmailPassword"];
+                msg.From = new MailAddress(fromEmail);
                 msg.To.Add(string.IsNullOrEmpty(personDetails.Email)
-                    ? "avsmelavakinwat2016@gmail.com"
+                    ? fromEmail
                     : personDetails.Email);
-                msg.Bcc.Add("avsmelavakinwat2016@gmail.com");
-                msg.Subject = "Auto-Reply:Melava Registration.";
+                msg.Bcc.Add(fromEmail);
+                msg.Subject = "Do Not Reply:Melava Registration.";
                 StringBuilder body =
                     new StringBuilder(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["EmailTemplate"]));
                 body.Replace("{Candidate Id}", personDetails.Id.ToString());
@@ -46,7 +48,7 @@ namespace MelavaWebsite.Common
                     Port = 587,
                     EnableSsl = true,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new NetworkCredential("avsmelavakinwat2016@gmail.com", "first#1234"),
+                    Credentials = new NetworkCredential(fromEmail, password),
                     Timeout = 20000
                 };
                 client.Send(msg);
