@@ -6,15 +6,6 @@
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
 }
-
-<head>
-    <style>
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
 <body>
     <div id="wrapper">
         <!-- Three -->
@@ -27,75 +18,77 @@
                         <div class="align-center">
                             <img src="~/Images/Logo/success-icon.png" width="250" height="250" />
                             <h2 class="align-center" style="vertical-align: central">You have been registered successfully..! </h2>
+                            @*<h1 class="align-center" style="vertical-align: central">Thank you for registering with us. </h1>*@
+
                         </div>
                     }
                     else
                     {
-                        <h2>Candidate Registration</h2>
+                        <h2>Candidate Registration / उपवर - उपवधू नोंदणी </h2>
                         <div class="split style1">
                             <section>
                                 <form method="post" action="#">
                                     @Html.AntiForgeryToken()
                                     @Html.ValidationSummary()
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.Name)
+                                        <label>Full Name / पूर्ण नाव </label>
                                         @Html.TextBoxFor(m => m.Name)
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.BirthName)
+                                        <label>Birth Name / जन्म नाव </label>
                                         @Html.TextBoxFor(m => m.BirthName)
                                     </div>
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.FirstGotra)
+                                        <label>First Gotra / पहिला गोत्र  </label>
                                         @Html.TextBoxFor(m => m.FirstGotra)
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.SecondGotra)
+                                        <label>Second Gotra / मामे गोत्र  </label>
                                         @Html.TextBoxFor(m => m.SecondGotra)
                                     </div>
 
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.Gender)
+                                        <label>Gender / लिंग   </label>
                                         @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender", new { @class = "form-control" })
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.Age)
+                                        <label>Age / वय    </label>
                                         @Html.TextBoxFor(m => m.Age)
                                     </div>
 
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.Height)
+                                        <label>Height / उंची     </label>
                                         @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x / 10F)), "Select Height", new { @class = "form-control" })
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.Education)
+                                        <label>Education / शिक्षण      </label>
                                         @Html.TextBoxFor(m => m.Education)
                                     </div>
 
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.Occupation)
+                                        <label>Occupation / व्यवसाय       </label>
                                         @Html.TextBoxFor(m => m.Occupation)
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.Address)
+                                        <label>Address / पत्ता       </label>
                                         @Html.TextBoxFor(m => m.Address)
                                     </div>
 
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.ContactNumber)
+                                        <label>Contact Number / संपर्क क्रमांक       </label>
                                         @Html.TextBoxFor(m => m.ContactNumber)
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.AnubandhId)
+                                        <label>Anubandh Id / अनुबंध क्रमांक        </label>
                                         @Html.TextBoxFor(m => m.AnubandhId)
                                     </div>
 
                                     <div class="field half first">
-                                        @Html.LabelFor(m => m.Email)
+                                        <label>Email / ई-मेल         </label>
                                         @Html.TextBoxFor(m => m.Email)
                                     </div>
                                     <div class="field half">
-                                        @Html.LabelFor(m => m.ImagePath)
+                                        <label>Image / छायाचित्र          </label>
                                         <input type="file" name="upload" /><br>
                                         <br>
                                     </div>
@@ -118,7 +111,7 @@
                                     </li>
                                     <li>
                                         <h3>You can send your queries on :</h3>
-                                        <a href="#">support@aryavaishyamelavakinwat.com</a>
+                                        <a href="#">avsmelavakinwat2016@gmail.com</a>
                                     </li>
                                 </ul>
                             </section>
@@ -128,14 +121,4 @@
             </section>
         }
     </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Durga Software Technologies. All rights reserved.</li>
-                <li>Designed By: Kalyan Kapratwar</li>
-            </ul>
-        </div>
-    </footer>
 </body>
