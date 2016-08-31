@@ -64,93 +64,93 @@ namespace MelavaWebsite.Controllers
         //
         // GET: /Registration/Details/5
 
-        public ActionResult Details(int id = 0)
-        {
-            PersonDetails persondetails = db.Persons.Find(id);
-            if (persondetails == null)
-            {
-                return HttpNotFound();
-            }
-            return View(persondetails);
-        }
+        //public ActionResult Details(int id = 0)
+        //{
+        //    PersonDetails persondetails = db.Persons.Find(id);
+        //    if (persondetails == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(persondetails);
+        //}
 
         //
         // GET: /Registration/Create
 
-        public ActionResult Create()
-        {
-            return View();
-        }
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
 
         //
         // POST: /Registration/Create
 
-        [HttpPost]
-        public ActionResult Create(PersonDetails persondetails)
-        {
-            if (ModelState.IsValid)
-            {
+        //[HttpPost]
+        //public ActionResult Create(PersonDetails persondetails)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
 
-                db.Persons.Add(persondetails);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //        db.Persons.Add(persondetails);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(persondetails);
-        }
+        //    return View(persondetails);
+        //}
 
         //
         // GET: /Registration/Edit/5
 
-        public ActionResult Edit(int id = 0)
-        {
-            PersonDetails persondetails = db.Persons.Find(id);
-            if (persondetails == null)
-            {
-                return HttpNotFound();
-            }
-            return View(persondetails);
-        }
+        //public ActionResult Edit(int id = 0)
+        //{
+        //    PersonDetails persondetails = db.Persons.Find(id);
+        //    if (persondetails == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(persondetails);
+        //}
 
         //
         // POST: /Registration/Edit/5
 
-        [HttpPost]
-        public ActionResult Edit(PersonDetails persondetails)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(persondetails).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(persondetails);
-        }
+        //[HttpPost]
+        //public ActionResult Edit(PersonDetails persondetails)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(persondetails).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(persondetails);
+        //}
 
         //
         // GET: /Registration/Delete/5
 
-        public ActionResult Delete(int id = 0)
-        {
-            PersonDetails persondetails = db.Persons.Find(id);
-            if (persondetails == null)
-            {
-                return HttpNotFound();
-            }
-            return View(persondetails);
-        }
+        //public ActionResult Delete(int id = 0)
+        //{
+        //    PersonDetails persondetails = db.Persons.Find(id);
+        //    if (persondetails == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(persondetails);
+        //}
 
         //
         // POST: /Registration/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            PersonDetails persondetails = db.Persons.Find(id);
-            db.Persons.Remove(persondetails);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    PersonDetails persondetails = db.Persons.Find(id);
+        //    db.Persons.Remove(persondetails);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
         public ActionResult Register()
         {
@@ -183,13 +183,17 @@ namespace MelavaWebsite.Controllers
                     db.Persons.Add(persondetails);
                     db.SaveChanges();
                     ViewData["Success"] = "Success";
-                    helper.SendEmail(persondetails);
+                    if (db.Persons != null && db.Persons.Local.Count > 0)
+                    {
+                        PersonDetails updatedPersondetails = db.Persons.Local[0];
+                        helper.SendEmail(updatedPersondetails);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    return RedirectToAction("Index","Error");
+                    return RedirectToAction("Index", "Error");
                 }
-                
+
             }
             return View(persondetails);
         }

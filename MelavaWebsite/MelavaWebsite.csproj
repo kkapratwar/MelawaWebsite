@@ -424,10 +424,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_hyperspaceLayout.cshtml" />
     <Content Include="Views\Registration\Index.cshtml" />
-    <Content Include="Views\Registration\Details.cshtml" />
-    <Content Include="Views\Registration\Create.cshtml" />
-    <Content Include="Views\Registration\Edit.cshtml" />
-    <Content Include="Views\Registration\Delete.cshtml" />
     <Content Include="Views\Registration\Register.cshtml" />
     <Content Include="Views\Shared\_reportLayout.cshtml" />
     <Content Include="Views\Shared\_homeLayout.cshtml" />
