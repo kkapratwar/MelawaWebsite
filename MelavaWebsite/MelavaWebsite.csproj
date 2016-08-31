@@ -224,6 +224,7 @@
     <Content Include="Content\hyperspacetemplate\assets\js\main.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\skel.min.js" />
     <Content Include="Content\hyperspacetemplate\assets\js\util.js" />
+    <Content Include="Content\hyperspacetemplate\images\about-photo.png" />
     <Content Include="Content\hyperspacetemplate\images\aple-vinit.png" />
     <Content Include="Content\hyperspacetemplate\images\b-1.png" />
     <Content Include="Content\hyperspacetemplate\images\bg-1.png" />
