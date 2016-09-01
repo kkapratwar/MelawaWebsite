@@ -2049,6 +2049,40 @@ button:hover,
             opacity: 0.1;
         }
 
+/*input[type="file"] {
+    display: none;
+}*/
+
+.custom-file-upload {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+    -ms-transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease;
+    background-color: transparent;
+    border: solid 1px !important;
+    border-color: #800000 !important;
+    border-radius: 3em;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.6em;
+    font-weight: bold;
+    height: calc(4.75em + 2px);
+    letter-spacing: 0.25em;
+    line-height: 4.75em;
+    outline: 0;
+    padding: 0 3.75em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
 /* Features */
 
 .features {
@@ -4016,7 +4050,6 @@ ul.topnav {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    background: Url(~/Content/hyperspacetemplate/images/bg-1.png);
 }
 
     ul.topnav li {
@@ -4075,15 +4108,14 @@ ul.topnav {
 }
 
 .text-wrapper {
-    width:600px;
+    width: 600px;
     margin: 0 auto;
 }
 
 #block1 {
-    float:left;
+    float: left;
 }
 
-#block2
-{
-    float:right;
+#block2 {
+    float: right;
 }

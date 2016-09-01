@@ -58,6 +58,7 @@ namespace MelavaWebsite.Models
         public string Address { get; set; }
 
         [Required(ErrorMessage = "Please enter Contact Number.")]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Please enter valid contact number.")]
         [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
 
