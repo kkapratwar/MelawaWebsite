@@ -4,8 +4,21 @@
     ViewBag.Title = "Error";
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/hyperspacetemplate/")assets/css/main.css"/>
+</head>
 
-<div id="wrapper style1">
-    <h1 class="error">Error.</h1>
-    <h2 class="error">An error occurred while processing your request.</h2>
-</div>
+<body>
+    <div id="wrapper">
+        <!-- Three -->
+
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2 class="error">Error.</h2>
+                <h3 class="error">An error occurred while processing your request. </h3>
+                <h3 class="error">Please retry once and still problem exist then please contact website management team present on Registration page.</h3>
+            </div>
+        </section>
+
+    </div>
+</body>

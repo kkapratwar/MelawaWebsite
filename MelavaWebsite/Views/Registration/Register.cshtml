@@ -31,51 +31,51 @@
                                     @Html.AntiForgeryToken()
                                     @Html.ValidationSummary()
                                     <div class="field half first">
-                                        <label>Full Name / पूर्ण नाव </label>
+                                        <label>Full Name / पूर्ण नाव *</label>
                                         @Html.TextBoxFor(m => m.Name)
                                     </div>
                                     <div class="field half">
-                                        <label>Birth Name / जन्म नाव </label>
+                                        <label>Birth Name / जन्म नाव *</label>
                                         @Html.TextBoxFor(m => m.BirthName)
                                     </div>
                                     <div class="field half first">
-                                        <label>First Gotra / पहिला गोत्र  </label>
+                                        <label>First Gotra / पहिला गोत्र * </label>
                                         @Html.TextBoxFor(m => m.FirstGotra)
                                     </div>
                                     <div class="field half">
-                                        <label>Second Gotra / मामे गोत्र  </label>
+                                        <label>Second Gotra / मामे गोत्र * </label>
                                         @Html.TextBoxFor(m => m.SecondGotra)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Gender / लिंग   </label>
+                                        <label>Gender / लिंग *  </label>
                                         @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender", new { @class = "form-control" })
                                     </div>
                                     <div class="field half">
-                                        <label>Age / वय    </label>
+                                        <label>Age / वय *   </label>
                                         @Html.TextBoxFor(m => m.Age)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Height / उंची     </label>
+                                        <label>Height / उंची *    </label>
                                         @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x / 10F)), "Select Height", new { @class = "form-control" })
                                     </div>
                                     <div class="field half">
-                                        <label>Education / शिक्षण      </label>
+                                        <label>Education / शिक्षण *     </label>
                                         @Html.TextBoxFor(m => m.Education)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Occupation / व्यवसाय       </label>
+                                        <label>Occupation / व्यवसाय *      </label>
                                         @Html.TextBoxFor(m => m.Occupation)
                                     </div>
                                     <div class="field half">
-                                        <label>Address / पत्ता       </label>
+                                        <label>Address / पत्ता *      </label>
                                         @Html.TextBoxFor(m => m.Address)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Contact Number / संपर्क क्रमांक       </label>
+                                        <label>Contact Number / संपर्क क्रमांक *      </label>
                                         @Html.TextBoxFor(m => m.ContactNumber)
                                     </div>
                                     <div class="field half">

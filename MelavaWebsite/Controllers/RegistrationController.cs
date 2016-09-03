@@ -79,7 +79,7 @@ namespace MelavaWebsite.Controllers
             }
             else
             {
-                return RedirectToAction("Login"); 
+                return RedirectToAction("Login");
             }
         }
 
@@ -197,24 +197,24 @@ namespace MelavaWebsite.Controllers
                     //    return RedirectToAction("ThankYouPage");
                     //}  
 
-                    if (Request.Files.Count > 0)
-                    {
-                        var file = Request.Files[0];
-                        if (file != null && (!string.IsNullOrEmpty(file.FileName)))
-                        {
-                            file.SaveAs(HttpContext.Server.MapPath("~/CandidatePhotos/") + file.FileName);
-                            persondetails.ImagePath = "~/CandidatePhotos/" + file.FileName;
-                        }
-                    }
+                    //if (Request.Files.Count > 0)
+                    //{
+                    //    var file = Request.Files[0];
+                    //    if (file != null && (!string.IsNullOrEmpty(file.FileName)))
+                    //    {
+                    //        file.SaveAs(HttpContext.Server.MapPath("~/CandidatePhotos/") + file.FileName);
+                    //        persondetails.ImagePath = "~/CandidatePhotos/" + file.FileName;
+                    //    }
+                    //}
                     persondetails.CreatedDate = DateTime.Now;
                     db.Persons.Add(persondetails);
                     db.SaveChanges();
                     ViewData["Success"] = "Success";
-                    if (db.Persons != null && db.Persons.Local.Count > 0)
-                    {
-                        PersonDetails updatedPersondetails = db.Persons.Local[0];
-                        helper.SendEmail(updatedPersondetails);
-                    }
+                    //if (db.Persons != null && db.Persons.Local.Count > 0)
+                    //{
+                    //    PersonDetails updatedPersondetails = db.Persons.Local[0];
+                    //    helper.SendEmail(updatedPersondetails);
+                    //}
                 }
                 catch (Exception ex)
                 {
