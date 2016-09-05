@@ -16,7 +16,7 @@
                     @if (ViewData["Success"] != null)
                     {
                         <div class="align-center">
-                            <img src="~/Images/Logo/success-icon.png" width="250" height="250" />
+                            <img src="~/Images/Logo/success-icon.png" width="250" height="250"/>
                             <h2 class="align-center" style="vertical-align: central">You have been registered successfully..! </h2>
                             @*<h1 class="align-center" style="vertical-align: central">Thank you for registering with us. </h1>*@
 
@@ -25,6 +25,7 @@
                     else
                     {
                         <h2>Candidate Registration / उपवर - उपवधू नोंदणी </h2>
+                        <p style="margin-bottom: -1em">(नोट : कृपया सर्व माहिती इंग्रजी मध्ये भरा.)</p>
                         <div class="split style1">
                             <section>
                                 <form method="post" action="#">
@@ -39,7 +40,7 @@
                                         @Html.TextBoxFor(m => m.BirthName)
                                     </div>
                                     <div class="field half first">
-                                        <label>First Gotra / स्वगोत्र  * </label>
+                                        <label>First Gotra / स्वगोत्र * </label>
                                         @Html.TextBoxFor(m => m.FirstGotra)
                                     </div>
                                     <div class="field half">
@@ -48,53 +49,54 @@
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Gender / लिंग *  </label>
-                                        @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender", new { @class = "form-control" })
+                                        <label>Gender / लिंग * </label>
+                                        @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof (Gender))), "Select Gender", new {@class = "form-control"})
                                     </div>
                                     <div class="field half">
-                                        <label>Age / वय *   </label>
+                                        <label>Age / वय * </label>
                                         @Html.TextBoxFor(m => m.Age)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Height / उंची *    </label>
-                                        @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x / 10F)), "Select Height", new { @class = "form-control" })
+                                        <label>Height / उंची * </label>
+                                        @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x/10F)), "Select Height", new {@class = "form-control"})
                                     </div>
                                     <div class="field half">
-                                        <label>Education / शिक्षण *     </label>
+                                        <label>Education / शिक्षण * </label>
                                         @Html.TextBoxFor(m => m.Education)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Occupation / व्यवसाय *      </label>
+                                        <label>Occupation / व्यवसाय * </label>
                                         @Html.TextBoxFor(m => m.Occupation)
                                     </div>
                                     <div class="field half">
-                                        <label>Address / पत्ता *      </label>
+                                        <label>Address / पत्ता * </label>
                                         @Html.TextBoxFor(m => m.Address)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Contact Number / संपर्क क्रमांक *      </label>
+                                        <label>Contact Number / संपर्क क्रमांक * </label>
                                         @Html.TextBoxFor(m => m.ContactNumber)
                                     </div>
                                     <div class="field half">
-                                        <label>Anubandh Id / अनुबंध क्रमांक        </label>
+                                        <label>Anubandh Id / अनुबंध क्रमांक </label>
                                         @Html.TextBoxFor(m => m.AnubandhId)
                                     </div>
 
                                     <div class="field half first">
-                                        <label>Email / ई-मेल         </label>
+                                        <label>Email / ई-मेल </label>
                                         @Html.TextBoxFor(m => m.Email)
                                     </div>
                                     <div class="field half">
-                                        <label>Image / छायाचित्र          </label>
-                                        <input type="file" name="upload" accept="image/*"/><br/><br/>
+                                      @*  <label>Image / छायाचित्र </label>
+                                        <input type="file" name="upload" accept="image/*"/><br/><br/>*@
 
                                         @*<label class="custom-file-upload">
                                             <input type="file" accept="image/*"/>
                                             Select Photo
                                         </label>*@
+                                        <br/><br/><br/>
                                     </div>
                                     @*@Html.MathCaptcha()*@
                                     <ul class="actions">
@@ -103,7 +105,7 @@
                                 </form>
                             </section>
                             <section>
-                                <br />
+                                <br/>
                                 <ul class="contact">
                                     <li>
                                         <h3>Having problem while registration? </h3>
