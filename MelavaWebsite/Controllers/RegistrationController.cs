@@ -59,11 +59,11 @@ namespace MelavaWebsite.Controllers
                 {
                     Session["UserID"] = user.UserId.ToString();
                     Session["UserName"] = user.UserName.ToString();
-                    return RedirectToAction("Index"); 
+                    return RedirectToAction("Index");
                 }
                 else
                 {
-                    return RedirectToAction("Login"); 
+                    return RedirectToAction("Login");
                 }
             }
             return View();
@@ -243,6 +243,22 @@ namespace MelavaWebsite.Controllers
             IEnumerable<PersonDetails> lstEntities = db.Persons.ToList();
             return GenerateExcel<PersonDetails>(lstEntities.OrderBy(m => m.Id), "CandidateList", lstexcelColumConfiguration);
         }
+
+        public ActionResult LogOut()
+        {
+
+            try
+            {
+                Session["UserName"] = null;
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+            return View("Home");
+        }
+
+
 
         public FileResult GenerateExcel<T>(IEnumerable<T> lstT, string FileName, List<ExcelColumConfiguration> lstexcelColumConfiguration)
         {

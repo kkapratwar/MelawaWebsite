@@ -9,16 +9,23 @@
 <div id="wrapper">
     <div class="inner align-left" style="padding: 0 2em 0 2em">
         <button style="float: right" type="button" id="addressSearch"
-                onclick="location.href = '@Url.Action("ExportList", "Registration")'">
-            Export List
+                onclick="location.href = '@Url.Action("LogOut", "Registration")'">
+            Log Out
         </button>
+        @if (Session["UserName"].ToString() == "Admin")
+        {
+            <button style="float: right" type="button" id="addressSearch"
+                    onclick="location.href = '@Url.Action("ExportList", "Registration")'">
+                Export List
+            </button>
+        }
         <button style="float: right" type="button" id="addressSearch"
                 onclick="location.href = '@Url.Action("Home", "Registration")'">
             Home
         </button>
-         <h2>Candidate Registration Details </h2>
+        <h2>Candidate Registration Details </h2>
     </div>
-   
+
     <section class="wrapper style1 align-center fade-up">
         <table>
             <tr>
@@ -58,14 +65,14 @@
                 @*  <th>
                     @Html.DisplayNameFor(model => model.Address)
                 </th>*@
-                <th>
+                @* <th>
                     @Html.DisplayNameFor(model => model.ContactNumber)
-                </th>
+                </th>*@
                 @* <th>
                     @Html.DisplayNameFor(model => model.CreatedDate)
                 </th>*@
                 <th>
-                   @Html.DisplayNameFor(model => model.ImagePath)
+                    @Html.DisplayNameFor(model => model.ImagePath)
                 </th>
                 <th></th>
             </tr>
@@ -109,9 +116,9 @@
                     @* <td>
                         @Html.DisplayFor(modelItem => item.Address)
                     </td>*@
-                    <td>
+                    @*  <td>
                         @Html.DisplayFor(modelItem => item.ContactNumber)
-                    </td>
+                    </td>*@
                     @* <td>
                         @Html.DisplayFor(modelItem => item.CreatedDate)
                     </td>*@
