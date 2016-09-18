@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -181,6 +182,9 @@ namespace MelavaWebsite.Controllers
 
         public ActionResult Register()
         {
+
+            //ViewData["HeightList"] = new SelectList(heightList, "HeightString", "Height");
+            //ViewData["HeightList"] = (IEnumerable)heightList;
             return View();
         }
 
@@ -207,8 +211,11 @@ namespace MelavaWebsite.Controllers
                     //    }
                     //}
                     persondetails.CreatedDate = DateTime.Now;
-                    db.Persons.Add(persondetails);
-                    db.SaveChanges();
+                    if (!db.Persons.Any(x => x.Name == persondetails.Name))
+                    {
+                        db.Persons.Add(persondetails);
+                        db.SaveChanges();
+                    }
                     ViewData["Success"] = "Success";
                     //if (db.Persons != null && db.Persons.Local.Count > 0)
                     //{

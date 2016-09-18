@@ -1,10 +1,21 @@
-﻿`   @using CaptchaMvc.HtmlHelpers
+﻿`   @using System.Collections   @using CaptchaMvc.HtmlHelpers
 @using MelavaWebsite.Models
 @model PersonDetails
 
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_hyperspaceLayout.cshtml";
+
+
+    List<SelectListItem> heightList = new List<SelectListItem>();
+    string height;
+    for (decimal i = 4; i < 9; i++)
+    {
+        for (decimal j = 0; j < 12; j++)
+        {
+            heightList.Add(new SelectListItem() { Text = i + "." + j, Value = i + "." + j });
+        }
+    }
 }
 <body>
     <div id="wrapper">
@@ -13,10 +24,11 @@
         {
             <section id="three" class="wrapper style1 fade-up">
                 <div class="inner">
+
                     @if (ViewData["Success"] != null)
                     {
                         <div class="align-center">
-                            <img src="~/Images/Logo/success-icon.png" width="250" height="250"/>
+                            <img src="~/Images/Logo/success-icon.png" width="250" height="250" />
                             <h2 class="align-center" style="vertical-align: central">You have been registered successfully..! </h2>
                             @*<h1 class="align-center" style="vertical-align: central">Thank you for registering with us. </h1>*@
 
@@ -50,7 +62,7 @@
 
                                     <div class="field half first">
                                         <label>Gender / लिंग * </label>
-                                        @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof (Gender))), "Select Gender", new {@class = "form-control"})
+                                        @Html.DropDownList("Gender", new SelectList(Enum.GetValues(typeof(Gender))), "Select Gender", new { @class = "form-control" })
                                     </div>
                                     <div class="field half">
                                         <label>Age / वय * </label>
@@ -59,7 +71,8 @@
 
                                     <div class="field half first">
                                         <label>Height / उंची * </label>
-                                        @Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x/10F)), "Select Height", new {@class = "form-control"})
+                                        @*@Html.DropDownListFor(model => model.Height, new SelectList(Enumerable.Range(40, 31).Select(x => x/10F)), "Select Height", new {@class = "form-control"})*@
+                                        @Html.DropDownListFor(model => model.Height, heightList, "Select Height")
                                     </div>
                                     <div class="field half">
                                         <label>Education / शिक्षण * </label>
@@ -89,14 +102,16 @@
                                         @Html.TextBoxFor(m => m.Email)
                                     </div>
                                     <div class="field half">
-                                      @*  <label>Image / छायाचित्र </label>
+                                        @*  <label>Image / छायाचित्र </label>
                                         <input type="file" name="upload" accept="image/*"/><br/><br/>*@
 
                                         @*<label class="custom-file-upload">
                                             <input type="file" accept="image/*"/>
                                             Select Photo
                                         </label>*@
-                                        <br/><br/><br/>
+                                        <br />
+                                        <br />
+                                        <br />
                                     </div>
                                     @*@Html.MathCaptcha()*@
                                     <ul class="actions">
@@ -105,7 +120,7 @@
                                 </form>
                             </section>
                             <section>
-                                <br/>
+                                <br />
                                 <ul class="contact">
                                     <li>
                                         <h3>Having problem while registration? </h3>

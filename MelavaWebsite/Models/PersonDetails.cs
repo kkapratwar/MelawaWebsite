@@ -43,7 +43,7 @@ namespace MelavaWebsite.Models
 
         [Required(ErrorMessage = "Please select Height.")]
         [Display(Name = "Height")]
-        public decimal Height { get; set; }
+        public string Height { get; set; }
 
         [Required(ErrorMessage = "Please select Gender.")]
         [Display(Name = "Gender")]
@@ -78,8 +78,6 @@ namespace MelavaWebsite.Models
 
         [Display(Name = "Photo")]
         public string ImagePath { get; set; }
-
-
     }
 
     public class DbPersonDetails : DbContext
