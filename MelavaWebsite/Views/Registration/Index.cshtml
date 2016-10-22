@@ -62,18 +62,18 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Occupation)
                 </th>
-                @*  <th>
+                  <th>
                     @Html.DisplayNameFor(model => model.Address)
-                </th>*@
+                </th>
                 @* <th>
                     @Html.DisplayNameFor(model => model.ContactNumber)
                 </th>*@
                 @* <th>
                     @Html.DisplayNameFor(model => model.CreatedDate)
                 </th>*@
-                <th>
+                @*<th>
                     @Html.DisplayNameFor(model => model.ImagePath)
-                </th>
+                </th>*@
                 <th></th>
             </tr>
 
@@ -113,9 +113,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Occupation)
                     </td>
-                    @* <td>
+                     <td>
                         @Html.DisplayFor(modelItem => item.Address)
-                    </td>*@
+                    </td>
                     @*  <td>
                         @Html.DisplayFor(modelItem => item.ContactNumber)
                     </td>*@
@@ -127,12 +127,12 @@
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                     </td>*@
-                    <td>
+                    @*<td>
                         @if (item.ImagePath != null)
                         {
                             <img src="@Url.Content(item.ImagePath)" alt="IMAGES" height="50" width="50"/>
                         }
-                    </td>
+                    </td>*@
                 </tr>
             }
 
